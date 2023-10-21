@@ -24,6 +24,7 @@
   } 
 
   .header .navbar a{
+    text-transform: uppercase;
     padding-inline: 10px;
     text-decoration: none;
     color:  #faf4d3;
@@ -64,12 +65,14 @@
   .product{
     height: fit-content;
     margin-top: 2px ;
-    background-color: #faf4d3;     
+    background-color: #faf4d3;    
+     
   }
 
 
   .product .heading,
-  .our-work .heading{
+  .our-work .heading,
+  .about-us .heading{
     text-align: center;
     padding-top: 25px;    
   }
@@ -78,16 +81,23 @@
     text-transform: uppercase;
     color: #004643;
     font-size: 50px;
-    padding-bottom: 30px;
+    padding-bottom: 30px;    
+  }
+
+  .heading h1:hover{
+    cursor: pointer;
+    color: crimson;
   }
 
   .heading h3{
-    padding-bottom: 10px;
-    font-size: 30px;
+    font-size: 38px;
+    margin-bottom: 20px;
   }
 
   .heading p{
-   font-size: larger;
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 40px;
   }
 
   .main-box{
@@ -131,21 +141,112 @@
   .our-work {
     background: url(./image/background.jpg);
     background-attachment: fixed;
-    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 8%;
+
     
+  }
+
+  .our-work .heading{
+    animation: fadeInRight 2s ease;
   }
 
   .our-work .heading h1{
     color: #faf4d3;
   }
 
-  .bbb .abab{
-    background-color: #faf4d3;
-    height: 100vh;
+  .our-work .heading button{
+    height: 30px;
+    background-color: #004643;
+    color: #faf4d3;
+    width: 90px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
   }
 
+  .our-work .gallery{
+    animation: fadeInUp 2s ease;
+    background-color: rgba(0, 0, 0, 0.80);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 10px;
+  }
+
+  .our-work .gallery img{
+    width: 100%;
+  }
+
+
+  .about-us{
+    background-color: #faf4d3;
+    height: fit-content;
+  }
+
+  .about-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 65px auto;
+  }
+
+  .hero-content{
+     flex: 1;
+     width: 600px;
+     margin: 0px 25px;
+     animation: fadeInUp 2s ease;
+  }
+
+  .hero-content h2{
+    font-size: 38px;
+    margin-bottom: 20px;
+  }
+
+  .hero-content p{
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+  }
+
+
+  .hero-image{
+    flex:1;
+    width: 200px;
+    margin: auto;
+    animation: fadeInRight 2s ease;
+  }
+
+  .hero-image img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
   .main-container{
     background-color: #004643;
+  }
+
+  .main-container .footer-hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-hero .logo-image{
+    height: 300px;
+    background-color: aqua;
+  }
+
+  .footer-hero .products{
+    background-color: aquamarine;
+  }
+
+  .footer-hero .contact-us{
+    background-color: blue;
   }
 
   .foot{
@@ -153,8 +254,6 @@
     text-align: center;
     padding: 10px;
   }
-
-
   
 /* Media query for responsiveness */
 @media (max-width: 768px ) and (min-width:300px) {
@@ -207,12 +306,12 @@
       }
     
       .heading h3 {
-        font-size: 20px;
-        padding-bottom: 10px; 
+        font-size: 30px;
       }
 
       .heading p{
-        font-size: 15px;
+        font-size: 18px;
+        margin-bottom:20px;
       }
 
       .box{
@@ -228,9 +327,56 @@
         gap: 0;
       }
 
+      .about-container{
+        width: 100%; 
+        flex-direction: column;
+        margin: 0px;
+        padding: 0px 40px;
+        padding-bottom: 10px;
+      }     
       
+      .hero-content{
+        width: 100%;
+        margin: 35px 0px;
+      }
+
+      .hero-content h2{
+        font-size: 30px;
+      }
+
+      .hero-content p{
+        font-size: 18px;
+        margin-bottom:20px;
+      }
+
+      .hero-image{
+        width: 100%;
+      }
 
       .foot p{
         font-size: 12px;
       }
+}
+
+@keyframes fadeInUp{
+  0%{
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+
+@keyframes fadeInRight{
+  0%{
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
