@@ -47,12 +47,27 @@
   }
 
   .swiper-slide {
-    text-align: center;
+    text-align: left;
     font-size: 18px;
     background: #faf4d3;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .swiper-wrapper{
+    position: relative;
+  }
+
+  .bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    padding-bottom: 40px;
+  }
+
+  .bottom-left h1{
+    color:crimson;
+    font-size: 70px;
   }
 
   .swiper-slide img {
@@ -145,6 +160,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     padding: 50px 8%;
 
     
@@ -158,14 +174,19 @@
     color: #faf4d3;
   }
 
-  .our-work .heading button{
+  .our-work .button button{
     height: 30px;
     background-color: #004643;
-    color: #faf4d3;
     width: 90px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    margin-top: 15px;
+  }
+
+  .button a{
+    text-decoration: none;
+    color: #faf4d3;
   }
 
   .our-work .gallery{
@@ -191,7 +212,8 @@
     justify-content: center;
     align-items: center;
     width: 90%;
-    margin: 65px auto;
+    margin:  auto;
+    padding-bottom: 50px;
   }
 
   .hero-content{
@@ -228,25 +250,34 @@
   
   .main-container{
     background-color: #004643;
+    
+  }
+
+  .main-container h3{
+    color: #faf4d3;
+    padding-bottom: 10px;  
   }
 
   .main-container .footer-hero{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    flex-wrap:wrap;
+    column-gap:40px;
+    row-gap:20px;
+    padding: 40px 20px;
   }
 
-  .footer-hero .logo-image{
-    height: 300px;
-    background-color: aqua;
+  .footer-hero .logo-image img{
+    height: 50px;
   }
 
   .footer-hero .products{
-    background-color: aquamarine;
+   
   }
 
   .footer-hero .contact-us{
-    background-color: blue;
+    
   }
 
   .foot{
@@ -255,6 +286,36 @@
     padding: 10px;
   }
   
+
+  .fa {
+    padding: 10px;
+    font-size: 100px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .fa:hover {
+    opacity: 0.7;
+  }
+
+  .fa-google {
+    background: #dd4b39;
+    color: white;
+  }
+
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+
+
+
 /* Media query for responsiveness */
 @media (max-width: 768px ) and (min-width:300px) {
     .header {
@@ -355,6 +416,18 @@
 
       .foot p{
         font-size: 12px;
+      }
+
+      .footer-hero .logo-image img {
+        height: 40px; 
+      }
+    
+      .footer-hero .products, .footer-hero .contact-us {
+        flex: 2; 
+      }
+
+      .footer-hero .products h3, .footer-hero .contact-us h3{
+        font-size: medium;
       }
 }
 

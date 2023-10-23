@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <link rel="stylesheet" href="lightbox.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <title>Urban </title>
 </head>
@@ -30,7 +31,13 @@
     <section class="img-swipper">
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="./image/slide1.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="./image/slide1.jpg" alt="">
+        <div class="bottom-left">
+          <!-- <h1>Welcome</h1>
+          <h2>Urban Interior</h2>
+          <h3>Home to beautiful interior</h3> -->
+        </div>
+      </div>
       <div class="swiper-slide"><img src="./image/slide2.jpg" alt=""></div>
       <div class="swiper-slide"><img src="./image/slide3.webp" alt=""></div>
       <div class="swiper-slide"><img src="./image/slide4.jpg" alt=""></div>
@@ -150,23 +157,11 @@
      <section class="our-work" id="our-work">
       <div class="heading">
         <h1>our work</h1>
-        <button type="submit">
-          See More
-        </button>
       </div>
       <div class="gallery">
         <a href="./image/our-work/work-1.jpg" data-lightbox="models", data-title="22">
           <img src="./image/our-work/work-1.jpg" alt="">
         </a>
-
-        <a href="./image/our-work/work-2.png" data-lightbox="models", data-title="22">
-          <img src="./image/our-work/work-2.png" alt="">
-        </a>
-        
-        <a href="./image/our-work/work-3.jpeg" data-lightbox="models", data-title="22">
-          <img src="./image/our-work/work-3.jpeg" alt="">
-        </a>
-
         <a href="./image/our-work/work-4.jpeg" data-lightbox="models", data-title="22">
           <img src="./image/our-work/work-4.jpeg" alt="">
         </a>
@@ -178,6 +173,18 @@
         <a href="./image/our-work/work-6.webp" data-lightbox="models", data-title="22">
           <img src="./image/our-work/work-6.webp" alt="">
         </a>
+        <a href="./image/our-work/work-3.jpeg" data-lightbox="models", data-title="22">
+          <img src="./image/our-work/work-3.jpeg" alt="">
+        </a>
+
+        <a href="./image/our-work/work-2.png" data-lightbox="models", data-title="22">
+          <img src="./image/our-work/work-2.png" alt="">
+        </a>
+      </div>
+      <div class="button">
+        <button type="submit" >
+          <a href="gallery.html">See More</a>
+        </button>
       </div>
     </section> 
 
@@ -202,7 +209,7 @@
   <footer class="main-container">
     <section class="footer-hero">
       <div class="logo-image">
-        <img src="" alt="">
+        <img src="./image/logo.png" alt="">
         <div class="follow-us"></div>
       </div>
       <div class="products">
@@ -215,7 +222,13 @@
       <div class="contact-us">
         <h3>CONTACT US</h3>
         <P>+91 84199 16717</P>
-        <p>sakinaka mumbai</p>
+        <p>sakinaka <br>mumbai <br>400 072</p>
+      </div>
+      <div class="follow-us">
+        <h3>FOLLOW US</h3>
+        <a href="#" class="fa fa-youtube"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-google"></a>
       </div>
     </section>
     <section class="foot">
@@ -227,8 +240,10 @@
      <!-- Swiper JS -->
      <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
+<script src="lightbox-plus-jquery.js"></script>
+
      <!-- Initialize Swiper -->
-     <script src="lightbox-plus-jquery.js">
+     <script>
        var swiper = new Swiper(".mySwiper", {
          navigation: {
            nextEl: ".swiper-button-next",
